@@ -1,13 +1,14 @@
 {
   "name": "stoking",
   "version": "1.0.0",
-  "homepage": "https://svforg.github.io/stoking/",
+  "homepage": "http://MoskvinAndrew.github.io/stoking/",
   "description": "",
   "private": true,
   "scripts": {
     "start": "webpack serve --mode development --open",
     "build": "webpack --mode production",
-    "deploy": "gh-pages -d dist"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d  build"
   },
   "proxy": {
     "*": {
