@@ -1,0 +1,15 @@
+.childInner {}
+
+.childList {
+  display: flex;
+  flex-direction: column;
+}
+
+.childItem {
+  margin-bottom: 4px;
+}
+.childItemLink {
+  display: block;
+  color: #000;
+  font-size: 14px;
+}

@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  //background-color: #C1C1C1;
+  //background: #FCF0E6;
+  //border-radius: 10px;
+  border-bottom:1px solid #e9e2e2;
+  cursor: pointer;
+
+
+  .containerCell{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    //align-self: center;
+    width: max(20%);
+    height: 30px;
+    overflow: auto;
+
+
+  }
+  span{
+    align-self: center;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+.container:hover{
+  background-color: #FCF0E6;
+  border-bottom:1px solid grey;
+  border-radius: 10px;
+
+
+}
+.containerCell:nth-child(6){
+  width: max(11%);
+}

@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "jsx": "react",
+    "noEmitOnError": true,
+    "noUnusedLocals": false,
+    "removeComments": true,
+    "noImplicitAny": true,
+    "esModuleInterop": true,
+    "baseUrl": "./",
+    "paths": { // Указываем ссылки до директорий в проекте, чтобы каждый раз в импортах не писать относительные пути
+      "styles/*": ["src/assets/styles/*"],
+      "img/*": ["src/assets/img/*"],
+      "icons/*": ["src/assets/icons/*"],
+      "modules/*": ["src/components/modules/*"],
+      "routes/*": ["src/routes/*"],
+      "api/*": ["src/api/*"],
+      "store/*": ["src/store/*"]
+    }
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

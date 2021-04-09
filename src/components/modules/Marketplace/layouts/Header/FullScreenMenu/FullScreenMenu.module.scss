@@ -1,0 +1,21 @@
+.menuHeadings {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menuHeadingsInner {
+  display: flex;
+}
+.menuHeadingsPic {
+  height: 100%;
+  margin-right: 8px;
+  object-fit: contain;
+}
+.menuHeadingsTitle {
+  display: block;
+  width: 200px;
+  overflow: hidden;
+  font-size: 14px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

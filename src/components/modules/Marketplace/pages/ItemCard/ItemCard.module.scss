@@ -1,0 +1,51 @@
+
+.container{
+  display: flex;
+  flex-direction: column;
+  //justify-content: center;
+  align-items: center;
+  border: 1px solid #570cab;
+
+  .BreadCrumps{
+    width: max(95%);
+    border: 1px solid #ca2f53;
+  }
+  .sampleGoods{
+    border:1px solid red;
+    display: flex;
+    align-self: start;
+
+    .sampleGoodsHeader{
+      border:1px solid red;
+      font-family: Montserrat, sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 44px;
+      color: #3A3A3A;
+
+    }
+  }
+  .wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: max(95%);
+    border: 1px solid #2fcaa6;
+
+
+    .ProductInfo{
+      width: max(68%);
+    }
+    .BuyInfo{
+      width: max(30%);
+    }
+    .ProductDescription{
+      width: max(68%);
+    }
+    .AnalogsBlock{
+      width: max(30%);
+    }
+  }
+
+}

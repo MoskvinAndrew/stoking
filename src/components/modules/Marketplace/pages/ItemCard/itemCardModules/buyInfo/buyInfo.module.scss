@@ -1,0 +1,138 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.07);
+  height: 450px;
+  margin-top: 4%;
+
+  .container{
+  width: max(90%);
+
+    .itemPrice{
+      display: flex;
+      align-items: center;
+      margin-top: 30px;
+      font-family: 'Montserrat', sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 22px;
+      color: #3A3A3A;
+
+      .priceDigit{
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 44px;
+        color: #ED7117;
+      }
+      .moneyType{
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 44px;
+        color: #3A3A3A;
+      }
+    }
+
+}
+
+  .storagePresence{
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #3A3A3A;
+    margin-top: 10px;
+
+
+
+    .storages{
+      box-sizing: border-box;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      max-height: 80px;
+      margin-top: 10px;
+      .firstFiveStorage{
+        display: flex;
+        height: 25px;
+      }
+      .exactStorage{
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        color: #3A3A3A;
+        opacity: 0.5;
+      }
+      .storagePrice{
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        color: #3A3A3A;
+      }
+      .showAllButton{
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        text-decoration-line: underline;
+        color: #ED7117;
+      }
+    }
+  }
+}
+.delivery_calculator{
+
+  .accordionInputFrom{
+    margin-bottom: 5px;
+  }
+
+}
+
+.deliveryPriceWrapper{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+
+  .deliveryPrice{
+    display: flex;
+  }
+  .deliveryTime{
+    display: flex;
+  }
+  .deliveryDateText {
+    //width: max(45%);
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #3A3A3A;
+    opacity: 0.5;
+  }
+  .deliveryDate{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #3A3A3A;
+  }
+}
+.buttonGroup{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4%;
+}

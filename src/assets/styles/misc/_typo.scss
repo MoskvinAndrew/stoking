@@ -1,0 +1,152 @@
+html {
+  color: $colorDarkPrimary;
+  font-weight: normal;
+  font-size: 100%;
+  font-family: $mainFont;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+
+  @media only screen and ($laptopsMax) {
+    font-size: 95%;
+  }
+
+  @media only screen and ($largeTabletsMax) {
+    font-size: 93%;
+  }
+
+  @media only screen and ($smallTabletsMax) {
+    font-size: 88%;
+  }
+
+  @media only screen and ($phonesMax) {
+    font-size: 86%;
+  }
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  font-family: $mainFont;
+}
+
+h1, .h1 {
+  display: block;
+  margin: 0 0 26px 0;
+  font-weight: 700;
+  font-size: $size36px;
+  font-family: $secondFont;
+
+  @media only screen and ($smallTabletsMax) {
+    margin: 0 0 $step3 0;
+    font-size: $size24px;
+  }
+}
+
+h2, .h2 {
+  display: block;
+  margin: 0 0 14px 0;
+  font-weight: 700;
+  font-size: $size32px;
+  font-family: $secondFont;
+
+  @media only screen and ($smallTabletsMax) {
+    margin: 0 0 $step1 0;
+    font-size: $size20px;
+  }
+}
+
+h3, .h3 {
+  display: block;
+  margin: 0 0 14px 0;
+  font-weight: 700;
+  font-size: $size26px;
+  font-family: $secondFont;
+
+  @media only screen and ($smallTabletsMax) {
+    margin: 0 0 $step1 0;
+    font-size: $size18px;
+  }
+}
+
+h4, .h4 {
+  display: block;
+  margin: 0 0 14px 0;
+  font-weight: 700;
+  font-size: $size22px;
+  font-family: $secondFont;
+
+  @media only screen and ($smallTabletsMax) {
+    margin: 0 0 $step1 0;
+    font-size: $size16px;
+  }
+}
+
+h5, .h5 {
+  display: block;
+  margin: 0 0 14px 0;
+  font-weight: 700;
+  font-size: $size24px;
+  font-family: $mainFont;
+
+  @media only screen and ($smallTabletsMax) {
+    margin: 0 0 $step1 0;
+    font-size: $size18px;
+  }
+}
+
+h6, .h6 {
+  display: block;
+  margin: 0 0 14px 0;
+  font-weight: 700;
+  font-size: $size18px;
+  font-family: $mainFont;
+
+  @media only screen and ($smallTabletsMax) {
+    margin: 0 0 $step1 0;
+    font-size: $size16px;
+  }
+}
+
+p {
+  margin: 14px 0;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+strong {
+  font-family: $secondFont;
+}
+
+small {
+  margin: $step2 0;
+  font-size: $size14px;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+}
+
+a, a:active, a:visited {
+  position: relative;
+  color: $colorBluePrimary;
+  text-decoration: none;
+  transition: color $transitionDurationPrimary $transitionFunctionPrimary;
+}
+
+a:hover {
+  color: $colorBlueSecondary;
+  text-decoration: none;
+
+}
+
+li {
+  list-style-type: none;
+}

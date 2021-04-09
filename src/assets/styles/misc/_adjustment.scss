@@ -1,0 +1,103 @@
+body, html {
+  width: 100%;
+  height: 100%;
+  background-color: $colorLightSecondary;
+}
+html.scroll-disable {
+  overflow: unset;
+
+  body {
+    overflow: hidden;
+  }
+}
+
+#root {
+  height: 100%;
+}
+
+.site-inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &.scroll-disable {
+    margin-right: 15px;
+
+    &:after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 100;
+      width: 15px;
+      height: 100vh;
+      background: $colorLightPrimary;
+      transform: translateX(100%);
+      content: "";
+    }
+  }
+}
+
+main {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  min-height:100vh;
+  overflow: hidden;
+  background: $colorLightSecondary;
+
+  @media only screen and ($smallTabletsMin) {
+    margin-bottom: 440px;
+  }
+}
+
+section {
+  z-index: 1;
+  background: #EDEEF0;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: $containerWidth;
+  margin-right: auto;
+  margin-left: auto;
+  padding: $paddingWrapperDesktop;
+  @media only screen and ($phonesMax) {
+    max-width: 100%;
+    padding: $paddingWrapperMobile;
+  }
+  @media only ($smallTabletsMin) and ($smallTabletsMax) {
+    max-width: 720px;
+  }
+  @media only ($largeTabletsMin) and ($largeTabletsMax) {
+    max-width: 960px;
+    padding: $paddingWrapperLaptops;
+  }
+}
+
+*:focus {
+  outline-color: rgba($colorBlueSecondary,0.5);
+}
+
+
+/*Кастомный скроллбар*/
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+  box-shadow: inset 0 0 15px 1px $colorLightPrimary;
+}
+::-webkit-scrollbar-thumb {
+  background: #C1C1C1;
+  background-size: 100% 200%;
+  background-position: 0;
+  background-origin: padding-box;
+  border-radius: $borderRadiusPrimary;
+  border: 1px solid lighten(#C1C1C1, 30%);
+  transition: background-position .3s ease-in-out;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-position:  0 100%;
+}
