@@ -6,17 +6,21 @@ import {Button} from "@material-ui/core";
 import ShoppingCartOutlinedIcon from "@material-ui/icons/ShoppingCartOutlined";
 import AssignmentIndIcon from "@material-ui/icons/AssignmentInd";
 
+type deliveryDateType = {
+  date: number,
+  mounth: string
+}
 
-export const BuyInfo: React.FC = () => {
-  const props = {
-    itemPrice: 19260,
-    storagePresence: [
-      'Москва', 'Санкт-Петербург', 'Екатеринбург', 'Пермь', 'Вологда', 'Симферополь'
-      , 'Пермь', 'Вологда', 'Симферополь'
-    ],
-    deliveryPrice: 'бесплатно',
-    deliveryDate: {date: 29, mounth: 'марта'}
-  }
+
+type BuyInfoPropsType = {
+  itemPrice: number,
+  storagePresence: Array<string>,
+  deliveryPrice: string,
+  deliveryDate: deliveryDateType
+}
+
+export const BuyInfo: React.FC<BuyInfoPropsType> = (props) => {
+
   let [showAll, setShowAll] = useState<boolean>(false)
   const items = props.storagePresence.slice(0, 5)
   const onClickHandler = () => {

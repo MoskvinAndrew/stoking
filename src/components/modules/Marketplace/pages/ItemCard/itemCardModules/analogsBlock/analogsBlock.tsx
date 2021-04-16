@@ -7,15 +7,21 @@ import LanguageIcon from '@material-ui/icons/Language';
 import AssignmentIndIcon from '@material-ui/icons/AssignmentInd';
 import Flag from 'icons/germany'
 
+export type AnalogBlockType = {
+  id:number,
+  brand:string,
+  city:string,
+  deliveryTime:string,
+  itemPrice:string
+}
+
+type AnalogsBlockPropsType = {analogsInfoProps:Array<AnalogBlockType>}
 
 
-export const AnalogsBlock: React.FC = () => {
+export const AnalogsBlock: React.FC<AnalogsBlockPropsType> = (props) => {
 
-let analogsArray = [{id:1,brand:"Phiolent",city:"Moskow",deliveryTime:"12",itemPrice:"20166"},
-  {id:2,brand:"Makita",city:"Simferopol",deliveryTime:"56",itemPrice:"20145"},
-  {id:3,brand:"Bosch",city:"Perm",deliveryTime:"12",itemPrice:"20145"},
-  {id:4,brand:"Sparky",city:"Kerch",deliveryTime:"19",itemPrice:"20185"}]
-  const analogs = analogsArray.map((el:any)=> <AnalogItem key={el.id}
+
+  const analogs = props.analogsInfoProps.map((el:any)=> <AnalogItem key={el.id}
                                                           brand={el.brand}
                                                           itemPrice={el.itemPrice}
                                                           deliveryTime={el.deliveryTime}
@@ -48,10 +54,10 @@ let analogsArray = [{id:1,brand:"Phiolent",city:"Moskow",deliveryTime:"12",itemP
          <div className={ABstyle.bottomContainer}>
            <div><span>Способы оплаты</span></div>
            <div className={ABstyle.buttonsContainer}>
-             <Button variant={"contained"} style={{color: "#3A3A3A",fontSize: '12px'}}>
+             <Button variant={"outlined"} style={{color: "#3A3A3A",fontSize: '12px'}}>
              Оплата онлайн <LanguageIcon fontSize={"small"} style={{marginLeft:'10px'}} />
            </Button>
-             <Button variant={"contained"} style={{color: "#3A3A3A",fontSize: '12px'}}>
+             <Button variant={"outlined"} style={{color: "#3A3A3A",fontSize: '12px'}}>
                Выставление счета
                <AssignmentIndIcon fontSize={"small"} style={{marginLeft:'10px'}}/>
              </Button>

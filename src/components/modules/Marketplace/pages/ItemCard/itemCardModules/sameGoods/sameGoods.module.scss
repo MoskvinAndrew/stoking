@@ -1,0 +1,20 @@
+.wrapper{
+//border:5px solid darkgreen;
+  display: flex;
+  width: max(100%);
+  justify-content: space-between;
+
+
+  .arrowIcon{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  .componentsBlock{
+    width: max(90%);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+

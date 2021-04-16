@@ -6,20 +6,21 @@ import image2 from './../../../../../../../assets/image/itemCardPhotos/image-2.j
 import image3 from './../../../../../../../assets/image/itemCardPhotos/image-3.jpg'
 import image4 from './../../../../../../../assets/image/itemCardPhotos/image-4.jpg'
 
+type ProductInfoPropsType = {
+  itemBrand:string,
+  complectQuontity:number,
+  waterCycleQuontity:number,
+  controlType:string,
+  displayType:string,
+  washingClass:string,
+  dryingClass:string,
+  programsQuontity:number,
+  itemSize:string,
+  itemName:string
+}
 
-export const ProductInfo: React.FC = () => {
-  let props = {
-    itemBrand:'Dunfos',
-    complectQuontity:12,
-    waterCycleQuontity:1,
-    controlType:'механический',
-    displayType:'нет',
-    washingClass:'A',
-    dryingClass:'A',
-    programsQuontity:12,
-    itemSize:'85х34х56'
+export const ProductInfo: React.FC<ProductInfoPropsType> = (props) => {
 
-  }
   return (
     <>
       <div className={PIstyle.wrapper}>
@@ -28,6 +29,7 @@ export const ProductInfo: React.FC = () => {
 
         <div className={PIstyle.slider}>
           <Carousel  verticalSwipe={"standard"} width={'90%'}>
+
             <div>
               <img src={image2} />
               {/*<p className="legend">Legend 1</p>*/}
@@ -47,13 +49,13 @@ export const ProductInfo: React.FC = () => {
 
 
         <div className={PIstyle.description}>
-          <h6>Клапан обратный межфланговый 0989097 093655648 0989097 093655648</h6>
+          <h6>{props.itemName}</h6>
           <div className={PIstyle.descriptionItemBlock}>
             <div className={PIstyle.descriptionItem}>Производитель:</div>
             <div className={PIstyle.descriptionValue}>{props.itemBrand}</div>
           </div>
           <div className={PIstyle.descriptionItemBlock}>
-            <div className={PIstyle.descriptionItem}>Количество вмещаемых комплектов::</div>
+            <div className={PIstyle.descriptionItem}>Количество вмещаемых комплектов:</div>
             <div className={PIstyle.descriptionValue}>{props.complectQuontity}</div>
           </div>
           <div className={PIstyle.descriptionItemBlock}>

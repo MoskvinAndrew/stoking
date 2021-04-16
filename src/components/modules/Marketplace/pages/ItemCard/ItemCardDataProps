@@ -1,0 +1,48 @@
+import React from 'react';
+
+
+export let itemData = {
+  itemInfo: {
+    itemDescription: 'Клапан обратный чугунный межфланцевый двухстворчатый подпружиненный Ру16. Предназначен для защиты трубопровода от обратного потока, который может создать аварийную ситуацию. Клапаны срабатывают автоматически под действием рабочей среды. Устанавливаются на горизонтальных и вертикальных трубопроводах. Имеет компактные размеры и сравнительно небольшую массу, что делает их дешевле фланцевых обратных клапанов. При монтаже следует учитывать, что клапан обратный зажимается шпильками между двух фланцев, поэтому стоит подобрать комплектующие для монтажа нужного размера. Обратные клапана и комплектующие к ним Вы можете купить у компании АРМЛАЙНС.',
+    itemName: 'Клапан обратный межфланговый 0989097 093655648 0989097 093655648',
+    itemBrand: 'Dunfos',
+    complectQuontity: 12,
+    waterCycleQuontity: 1,
+    controlType: 'механический',
+    displayType: 'нет',
+    washingClass: 'A',
+    dryingClass: 'A',
+    programsQuontity: 12,
+    itemSize: '85х34х56'
+  },
+  buyInfoProps: {
+    itemPrice: 19260,
+    storagePresence: [
+      'Москва', 'Санкт-Петербург', 'Екатеринбург', 'Пермь', 'Вологда', 'Симферополь'
+      , 'Пермь', 'Вологда', 'Симферополь'
+    ],
+    deliveryPrice: 'бесплатно',
+    deliveryDate: {date: 29, mounth: 'марта'}
+  },
+  analogsInfoProps: [{id: 1, brand: "Phiolent", city: "Moskow", deliveryTime: "12", itemPrice: "20166"},
+    {id: 2, brand: "Makita", city: "Simferopol", deliveryTime: "56", itemPrice: "20145"},
+    {id: 3, brand: "Bosch", city: "Perm", deliveryTime: "12", itemPrice: "20145"},
+    {id: 4, brand: "Sparky", city: "Kerch", deliveryTime: "19", itemPrice: "20185"}],
+
+
+  sameInfoProps: [{
+    id: 1,
+    brand: "Phiolent",
+    city: "Moskow",
+    itemHeader: "Клапан обратный межфланговый 065В7535 149В2425",
+    itemPrice: "20166"
+  },
+    {id: 2, brand: "Makita", city: "Simferopol",
+      itemHeader: "Клапан обратный межфланговый 065В5635 149В7825", itemPrice: "12145"},
+    {id: 3, brand: "Bosch", city: "Perm", itemHeader: "Клапан обратный межфланговый 0656535 14725", itemPrice: "20145"},
+    {id: 4, brand: "Hilti", city: "Kerch", itemHeader: "Клапан обратный межфланговый  ", itemPrice: "2085"}
+  ]
+
+
+}
+
