@@ -7,7 +7,7 @@
   border: 1px solid #570cab;
 
   .BreadCrumps{
-    width: max(95%);
+    width: 100%;
     border: 1px solid #ca2f53;
   }
   .sameGoods{
@@ -39,29 +39,18 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: max(95%);
+
     //border: 3px solid #021510;
 
 
     .itemInfoBlock{
-      //border: 3px solid #2fcaa6;
+      border: 3px solid #2fcaa6;
       display: flex;
       justify-content: space-between;
-      width: max(100%);
       margin-bottom: 20px;
+      width: 100%;
     }
 
   }
-  .ProductInfo{
-    width: max(68%);
-  }
-  .BuyInfo{
-    width: max(30%);
-  }
-  .ProductDescription{
-    width: max(68%);
-  }
-  .AnalogsBlock{
-    width: max(30%);
-  }
+
 }

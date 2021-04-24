@@ -10,17 +10,22 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       width: '100%',
+      height:'20%',
       border: '1px solid grey',
       borderRadius:'5px',
+
     },
+
     heading: {
-      fontSize: theme.typography.pxToRem(15),
-      flexBasis: '85%',
+      fontSize: theme.typography.pxToRem(12),
+      flexBasis: '92%',
       flexShrink: 0,
+
     },
     secondaryHeading: {
-      fontSize: theme.typography.pxToRem(15),
+      fontSize: theme.typography.pxToRem(10),
       color: theme.palette.text.secondary,
+
     },
   }),
 );
@@ -35,8 +40,10 @@ export default function ControlledAccordions() {
 
   return (
     <div className={classes.root}>
-      <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+      <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}   style={{ border:'1px solid red'
+        }} >
         <AccordionSummary
+          style={{border:'1px solid red'}}
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1bh-content"
           id="panel1bh-header"

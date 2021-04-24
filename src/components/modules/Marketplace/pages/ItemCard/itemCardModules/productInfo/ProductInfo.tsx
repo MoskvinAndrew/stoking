@@ -43,13 +43,14 @@ export const ProductInfo: React.FC<ProductInfoPropsType> = (props) => {
               {/*<p className="legend">Legend 3</p>*/}
             </div>
           </Carousel>
-
         </div>
 
 
 
         <div className={PIstyle.description}>
-          <h6>{props.itemName}</h6>
+
+          <h6 className={PIstyle.itemName}>{props.itemName}</h6>
+
           <div className={PIstyle.descriptionItemBlock}>
             <div className={PIstyle.descriptionItem}>Производитель:</div>
             <div className={PIstyle.descriptionValue}>{props.itemBrand}</div>
@@ -59,7 +60,7 @@ export const ProductInfo: React.FC<ProductInfoPropsType> = (props) => {
             <div className={PIstyle.descriptionValue}>{props.complectQuontity}</div>
           </div>
           <div className={PIstyle.descriptionItemBlock}>
-            <div className={PIstyle.descriptionItem}>Расход воды за цикл, в л.:</div>
+            <div className={PIstyle.descriptionItem}>Расход воды за цикл, в л:</div>
             <div className={PIstyle.descriptionValue}>{props.waterCycleQuontity}</div>
           </div>
           <div className={PIstyle.descriptionItemBlock}>
@@ -83,7 +84,7 @@ export const ProductInfo: React.FC<ProductInfoPropsType> = (props) => {
             <div className={PIstyle.descriptionValue}>{props.programsQuontity}</div>
           </div>
           <div className={PIstyle.descriptionItemBlock}>
-            <div className={PIstyle.descriptionItem}>Размеры(ВхШхД):</div>
+            <div className={PIstyle.descriptionItem}>Размеры(ВхШхД),в см:</div>
             <div className={PIstyle.descriptionValue}>{props.itemSize}</div>
           </div>
 

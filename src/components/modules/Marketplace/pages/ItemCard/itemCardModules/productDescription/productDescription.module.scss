@@ -4,11 +4,14 @@
   background-color: #FFFFFF;
   border-radius: 10px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.07);
-  height: 100%;
-  //margin-top: 2%;
+  height: 430px;
+  width: 800px;
+
 
   .container {
-    width: max(95%);
+    width: max(90%);
+    padding-top: 15px;
+
 
   }
 
@@ -16,15 +19,17 @@
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 15px;
     line-height: 22px;
     display: flex;
-    margin-bottom: 4%;
-    margin-top: 2%;
+    margin-top: 21px;
+
 
     .description_text {
-      margin-left: 3%;
+      margin-right: 34px;
+      margin-left: 10px;
       cursor: pointer;
+      padding-bottom: 10px;
     }
 
     .active {
@@ -33,9 +38,12 @@
     }
   }
 
-  //.info_block{
-  //  padding: 20px 20px 5px 30px;
-  //
-  //}
 
+}
+.info_block{
+  margin-top: 25px;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-size: 11px;
+  line-height: 15px;
 }

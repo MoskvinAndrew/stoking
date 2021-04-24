@@ -1,9 +1,12 @@
 .wrapperMain{
-  height: 100%;
-  //margin-top: 4%;
+  width: 400px;
+  height: 430px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   .bottomWrapper{
-    height: 120px;
-    margin-top: 5px;
+    height: 135px;
     display: flex;
     justify-content: center;
     background-color: #FFFFFF;
@@ -13,15 +16,19 @@
       font-family: 'Montserrat', sans-serif;
       font-style: normal;
       font-weight: 700;
-      font-size: 18px;
+      font-size: 13px;
       line-height: 22px;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
-      width: max(90%);
+      width: max(80%);
+      padding-top: 30px;
       .buttonsContainer{
         display: flex;
         justify-content: space-between;
+        padding-bottom: 10px;
+        opacity: 0.5;
+
 
       }
     }
@@ -37,32 +44,28 @@
   background-color: #FFFFFF;
   border-radius: 10px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.07);
-  height: 220px;
+  height: 270px;
   padding: 5% 0% 10% 0%;
   .container {
-    width: max(90%);
+    width: max(80%);
+    padding-top: 18px;
+
     .blockName {
       font-family: 'Montserrat', sans-serif;
       font-style: normal;
       font-weight: 700;
-      font-size: 18px;
+      font-size: 14px;
       line-height: 22px;
-
       display: flex;
-      margin-bottom: 3%;
+      margin-bottom: 16px;
       justify-content: space-between;
       .blockNameLink{
-        //font-family: Montserrat;
         font-style: normal;
         font-weight: normal;
-        font-size: 14px;
-        line-height: 17px;
+        font-size: 11px;
+        line-height: 22px;
         cursor: pointer;
-        /* identical to box height */
-
         text-decoration-line: underline;
-
-        /* Акцент */
         color: #ED7117;
         opacity: 0.5;
       }
@@ -75,21 +78,26 @@
 
 
       .tableCell {
-        //font-family: Montserrat;
         display: flex;
-        justify-content: center;
-        width: max(20%);
+        justify-content: start;
+        width: 55px;
         font-style: normal;
         font-weight: normal;
-        font-size: 14px;
+        font-size: 11px;
         line-height: 17px;
         color: #3A3A3A;
         opacity: 0.5;
       }
       .tableCell:nth-child(6){
-        width: max(11%);
+        width: max(10%);
+
       }
 
     }
   }
+}
+.tableItem{
+  font-size: 11px;
+  line-height: 17px;
+  color: #3A3A3A;
 }

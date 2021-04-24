@@ -14,16 +14,17 @@ import {itemData} from "modules/Marketplace/pages/ItemCard/ItemCardDataProps";
 export const ItemCard: React.FC = Marketplace(() => {
 
   return (
-    <>
-      <div className={ICstyle.container}>
+
+      <div className={ICstyle.container +" "+ "wrapper"}>
 
         <div className={ICstyle.BreadCrumps}>Bread crumps</div>
 
         <div className={ICstyle.wrapper}>
 
           <div className={ICstyle.itemInfoBlock}>
-            <div className={ICstyle.ProductInfo}><ProductInfo complectQuontity={itemData.itemInfo.complectQuontity}
-                                                              controlType={itemData.itemInfo.complectQuontity}
+            <div>
+              <ProductInfo complectQuontity={itemData.itemInfo.complectQuontity}
+                                                              controlType={itemData.itemInfo.controlType}
                                                               displayType={itemData.itemInfo.displayType}
                                                               dryingClass={itemData.itemInfo.dryingClass}
                                                               itemBrand={itemData.itemInfo.itemBrand}
@@ -34,16 +35,21 @@ export const ItemCard: React.FC = Marketplace(() => {
                                                               itemName={itemData.itemInfo.itemName}
 
             /></div>
-            <div className={ICstyle.BuyInfo}><BuyInfo itemPrice={itemData.buyInfoProps.itemPrice}
+            <div className={ICstyle.BuyInfo}>
+              <BuyInfo itemPrice={itemData.buyInfoProps.itemPrice}
                                                       deliveryDate={itemData.buyInfoProps.deliveryDate}
                                                       deliveryPrice={itemData.buyInfoProps.itemPrice}
                                                       storagePresence={itemData.buyInfoProps.storagePresence}
-            /></div>
-          </div>
-          <div className={ICstyle.itemInfoBlock}>
-            <div className={ICstyle.ProductDescription}><ProductDescription
-              itemDescription={itemData.itemInfo.itemDescription}/>
+            />
             </div>
+          </div>
+
+          <div className={ICstyle.itemInfoBlock}>
+            <div className={ICstyle.ProductDescription}>
+              <ProductDescription
+                                  itemDescription={itemData.itemInfo.itemDescription}/>
+            </div>
+
             <div className={ICstyle.AnalogsBlock}><AnalogsBlock analogsInfoProps={itemData.analogsInfoProps}/></div>
           </div>
 
@@ -76,6 +82,6 @@ export const ItemCard: React.FC = Marketplace(() => {
         </div>
 
       </div>
-    </>
+
   )
 });

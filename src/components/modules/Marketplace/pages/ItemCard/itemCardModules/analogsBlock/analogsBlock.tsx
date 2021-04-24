@@ -46,7 +46,7 @@ export const AnalogsBlock: React.FC<AnalogsBlockPropsType> = (props) => {
                   <div className={ABstyle.tableCell}><span>Стоимость</span></div>
             <div className={ABstyle.tableCell}><span></span></div>
           </div>
-          {analogs}
+          <div className={ABstyle.tableItem}>{analogs}</div>
 
         </div>
       </div>
@@ -54,12 +54,13 @@ export const AnalogsBlock: React.FC<AnalogsBlockPropsType> = (props) => {
          <div className={ABstyle.bottomContainer}>
            <div><span>Способы оплаты</span></div>
            <div className={ABstyle.buttonsContainer}>
-             <Button variant={"outlined"} style={{color: "#3A3A3A",fontSize: '12px'}}>
-             Оплата онлайн <LanguageIcon fontSize={"small"} style={{marginLeft:'10px'}} />
+             <Button variant={"outlined"} style={{color: "#3A3A3A",fontSize: '8px'}}>
+               <div className={ABstyle.buttonName}>Оплата онлайн</div>
+               <LanguageIcon fontSize={"small"} style={{marginLeft:'15px',paddingLeft:'5px'}} />
            </Button>
-             <Button variant={"outlined"} style={{color: "#3A3A3A",fontSize: '12px'}}>
+             <Button variant={"outlined"} style={{color: "#3A3A3A",fontSize: '8px'}}>
                Выставление счета
-               <AssignmentIndIcon fontSize={"small"} style={{marginLeft:'10px'}}/>
+               <AssignmentIndIcon fontSize={"small"} style={{marginLeft:'15px',paddingLeft:'5px'}}/>
              </Button>
            </div>
          </div>

@@ -25,20 +25,38 @@ export const BuyInfo: React.FC<BuyInfoPropsType> = (props) => {
   const items = props.storagePresence.slice(0, 5)
   const onClickHandler = () => {
     setShowAll(!showAll)
-  }
+  };
+
+  const itemPriceMaker = (price:number) => {
+   let priceStringArray = price.toString().split("")
+    if (priceStringArray.length === 4){
+      priceStringArray.splice(1, 0, " ");
+    }else  if (priceStringArray.length === 5){
+      priceStringArray.splice(2, 0, " ");
+    }else  if (priceStringArray.length === 6) {
+      priceStringArray.splice(3, 0, " ");
+    }
+    return  priceStringArray.join("")
+  }                     //перенести в отдельный файл
+
   return (
     <>
       <div className={BIstyle.wrapper}>
         <div className={BIstyle.container}>
+
           <div className={BIstyle.itemPrice}>
-            <span>От</span>
-            <span className={BIstyle.priceDigit}>{props.itemPrice}</span>
+            <div style={{marginRight:'7px', fontSize: '14px'}}>{'От'}</div>
+
+            <div className={BIstyle.priceDigit}>
+              {itemPriceMaker(props.itemPrice) }
+            </div>
+
             <span className={BIstyle.moneyType}>₽</span>
           </div>
 
           <div className={BIstyle.storagePresence}>
 
-            <span>Наличие на складе в городе:</span>
+            <div className={BIstyle.headerName}>Наличие на складе в городе:</div>
 
             <div className={BIstyle.storages}>
               {showAll ? props.storagePresence : items.map(el =>
@@ -55,8 +73,10 @@ export const BuyInfo: React.FC<BuyInfoPropsType> = (props) => {
           <div className={BIstyle.delivery_calculator}>
 
             <div className={BIstyle.accordionInput}>
-              <div className={BIstyle.accordionInputFrom}><ControlledAccordions/></div>
-              <div className={BIstyle.accordionInputTo}><ControlledAccordions/></div>
+              {/*<div className={BIstyle.accordionInputFrom}><input/></div>*/}
+              <input  className={BIstyle.accordionInputTo}/>
+              <input  className={BIstyle.accordionInputTo}/>
+
             </div>
 
 
@@ -75,18 +95,32 @@ export const BuyInfo: React.FC<BuyInfoPropsType> = (props) => {
               </div>
             </div>
 
-            <div className={BIstyle.itemPrice}>
-              <span>Итоговая Сумма:</span>
-              <div className={BIstyle.priceDigit}>{props.itemPrice}</div>
-              <FavoriteBorderOutlinedIcon/>
+            <div className={BIstyle.finalPrice}>
+
+
+              <div style={{marginBottom:'5px'}}  className={BIstyle.deliveryDateText}>Итоговая cумма:</div>
+              <div className={BIstyle.finalPriceDigit}>
+                {itemPriceMaker(props.itemPrice)}
+                <span className={BIstyle.moneyType}>₽</span>
+              </div>
+
+
+
+              <div className={BIstyle.likeIcon}>
+                <FavoriteBorderOutlinedIcon style={{color:'#ED7117'}}/>
+              </div>
             </div>
 
 
             <div className={BIstyle.buttonGroup}>
-              <Button color="primary" style={{background: "#FF6E01"}} variant={"contained"}>Добавить в корзину
-                <ShoppingCartOutlinedIcon fontSize={"small"} style={{marginLeft: '10px'}}/>
+              <Button color="primary" style={{background: "#FF6E01"}} variant={"contained"}>
+                <div className={BIstyle.buttonAddTo}>Добавить в корзину</div>
+                <div className={BIstyle.iconBucket}><ShoppingCartOutlinedIcon width={5} fontSize={'small'} style={{marginLeft: '5px'}}/></div>
               </Button>
-              <Button style={{color: "#FF6E01"}} variant={"outlined"}>Купить в 1 клик</Button>
+
+              <Button style={{color: "#FF6E01",border:"1px solid #FF6E01"}} variant={"outlined"}>
+                <div className={BIstyle.buttonAddTo}>Купить в 1 клик</div>
+              </Button>
             </div>
           </div>
         </div>

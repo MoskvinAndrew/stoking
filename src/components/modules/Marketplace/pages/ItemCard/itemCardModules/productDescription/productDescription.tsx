@@ -12,9 +12,8 @@ type ProductDescriptionPropsType = {
 
 export const ProductDescription:React.FC<ProductDescriptionPropsType>= (props) => {
 
-  console.log(props.itemDescription)
+const [typeOfDescription,setTypeOfDescription]=useState<DescriptionType>('describe');
 
-  let [typeOfDescription,setTypeOfDescription]=useState<DescriptionType>('describe')
  const onClickHandler = (type:DescriptionType) =>{
    setTypeOfDescription(type)
  }
